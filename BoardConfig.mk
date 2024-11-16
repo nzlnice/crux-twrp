@@ -120,6 +120,7 @@ BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
@@ -141,6 +142,11 @@ TW_BATTERY_SYSFS_WAIT_SECONDS := 5
 
 # Haptics
 TW_NO_HAPTICS := true
+
+# SEPolicy
+-include device/xiaomi/crux/sepolicy/recovery-sepolicy.mk
+SELINUX_IGNORE_NEVERALLOWS := true
+#
 
 # Serialno
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
