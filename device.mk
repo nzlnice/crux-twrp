@@ -7,10 +7,6 @@
 
 LOCAL_PATH := device/xiaomi/crux
 
-# Display
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_WIDTH := 1080
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -19,8 +15,8 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# Crypto
-PRODUCT_PACKAGES += \
+# QCOM Crypto
+#PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
